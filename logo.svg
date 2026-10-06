@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7B217"/>
+      <stop offset="100%" stop-color="#E58800"/>
+    </linearGradient>
+    <linearGradient id="burgundyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A52A1A"/>
+      <stop offset="100%" stop-color="#721B10"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Arc text path definition -->
+  <path id="textArc" d="M 45,155 A 195,195 0 0,1 455,155" fill="none" stroke="none"/>
+
+  <!-- Curved Arabic Text -->
+  <text font-family="'Cairo', 'Tajawal', sans-serif" font-weight="700" font-size="19.5" fill="#721B10" letter-spacing="0.5">
+    <textPath href="#textArc" startOffset="50%" text-anchor="middle">
+      الشبكة المغربية للاقتصاد الاجتماعي والتضامني
+    </textPath>
+  </text>
+
+  <!-- Arch Frame and Solidarity Figures -->
+  <g filter="url(#shadow)">
+    <!-- Main Outer Arch -->
+    <path d="M 125,160 A 130,130 0 0,1 375,160" fill="none" stroke="#721B10" stroke-width="4.5" stroke-linecap="round"/>
+    
+    <!-- Outer Connecting Figures (Dots / Heads and Arms) -->
+    <!-- Head Left Bottom -->
+    <circle cx="120" cy="162" r="16" fill="url(#goldGrad)"/>
+    <!-- Head Left Top -->
+    <circle cx="178" cy="85" r="16" fill="url(#burgundyGrad)"/>
+    <!-- Head Center Top -->
+    <circle cx="250" cy="55" r="17" fill="url(#goldGrad)"/>
+    <!-- Head Right Top -->
+    <circle cx="322" cy="85" r="16" fill="url(#burgundyGrad)"/>
+    <!-- Head Right Bottom -->
+    <circle cx="380" cy="162" r="16" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Inner Chevron / Arrow Starburst (5 Elements) -->
+  <g id="starburst" transform="translate(250, 165)">
+    <!-- Center Chevron Top -->
+    <path d="M 0,-70 L 22,-20 L 0,-35 L -22,-20 Z" fill="url(#goldGrad)"/>
+    <path d="M 0,-70 L 0,-35 L 22,-20 Z" fill="#D97700" opacity="0.4"/>
+    
+    <!-- Top Left Chevron -->
+    <g transform="rotate(-72)">
+      <path d="M 0,-70 L 22,-20 L 0,-35 L -22,-20 Z" fill="url(#burgundyGrad)"/>
+      <path d="M 0,-70 L 0,-35 L 22,-20 Z" fill="#52130A" opacity="0.4"/>
+    </g>
+
+    <!-- Top Right Chevron -->
+    <g transform="rotate(72)">
+      <path d="M 0,-70 L 22,-20 L 0,-35 L -22,-20 Z" fill="url(#burgundyGrad)"/>
+      <path d="M 0,-70 L 0,-35 L 22,-20 Z" fill="#52130A" opacity="0.4"/>
+    </g>
+
+    <!-- Bottom Left Horizontal Chevron -->
+    <g transform="rotate(-144)">
+      <path d="M 0,-70 L 22,-20 L 0,-35 L -22,-20 Z" fill="url(#goldGrad)"/>
+      <path d="M 0,-70 L 0,-35 L 22,-20 Z" fill="#D97700" opacity="0.4"/>
+    </g>
+
+    <!-- Bottom Right Horizontal Chevron -->
+    <g transform="rotate(144)">
+      <path d="M 0,-70 L 22,-20 L 0,-35 L -22,-20 Z" fill="url(#goldGrad)"/>
+      <path d="M 0,-70 L 0,-35 L 22,-20 Z" fill="#D97700" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- Central Star Center Point Accent -->
+  <circle cx="250" cy="165" r="5" fill="#FFFFFF"/>
+
+  <!-- Base Line Separator -->
+  <line x1="80" y1="185" x2="420" y2="185" stroke="#E58800" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Logo Text: REMESS -->
+  <text x="250" y="245" font-family="'Outfit', 'Montserrat', sans-serif" font-weight="800" font-size="52" fill="#721B10" text-anchor="middle" letter-spacing="4">
+    REMESS
+  </text>
+
+  <!-- Logo Text Subtitle: Réseau Marocain d'Economie Sociale et Solidaire -->
+  <text x="250" y="278" font-family="'Outfit', 'Montserrat', sans-serif" font-weight="600" font-size="16.5" fill="#721B10" text-anchor="middle" letter-spacing="0.2">
+    Réseau Marocain d'Economie Sociale et Solidaire
+  </text>
+</svg>
