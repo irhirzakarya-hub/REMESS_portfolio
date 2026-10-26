@@ -16,8 +16,8 @@
     "facebook": {
       "id": "facebook",
       "title": "Facebook",
-      "url": "https://facebook.com/REMESS.Maroc",
-      "handle": "@REMESS.Maroc",
+      "url": "https://www.facebook.com/share/19nqAKdL8o/",
+      "handle": "@REMESS",
       "icon": "fa-brands fa-facebook-f",
       "color": "#1877F2",
       "enabled": true
@@ -26,7 +26,7 @@
       "id": "instagram",
       "title": "Instagram",
       "url": "https://instagram.com/remess_maroc",
-      "handle": "@remess_maroc",
+      "handle": "@remess",
       "icon": "fa-brands fa-instagram",
       "gradient": "linear-gradient(45deg, #F09433, #E6683C, #DC2743, #CC2366)",
       "enabled": true
@@ -35,7 +35,7 @@
       "id": "linkedin",
       "title": "LinkedIn",
       "url": "https://linkedin.com/company/remess-maroc",
-      "handle": "REMESS Maroc",
+      "handle": "REMESS",
       "icon": "fa-brands fa-linkedin-in",
       "color": "#0A66C2",
       "enabled": true
@@ -50,6 +50,12 @@
       "enabled": true
     },
     "siteweb": {
+      "id": "siteweb",
+      "title": "Site Web",
+      "url": "https://remess.ma",
+      "label": "www.remess.ma",
+      "icon": "fa-solid fa-globe",
+      "color": "#8C2B18",
       "enabled": false
     },
     "maps": {
@@ -82,8 +88,14 @@
       "enabled": false
     },
     "whatsapp": {
+      "id": "whatsapp",
+      "title": "WhatsApp",
+      "value": "+212661000000",
+      "label": "+212 661 000 000",
+      "icon": "fa-brands fa-whatsapp",
+      "color": "#25D366",
       "enabled": false
     }
   },
-  "updatedAt": "2026-10-26T14:31:59.980Z"
+  "updatedAt": "2026-10-26T15:14:44.774Z"
 }

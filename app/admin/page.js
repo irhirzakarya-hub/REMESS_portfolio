@@ -146,9 +146,10 @@ export default function AdminPage() {
       const json = await res.json();
       if (json.success) {
         setIsBlobActive(Boolean(json.isBlobConfigured));
-        triggerToast('Toutes les modifications ont été enregistrées !');
+        const sourceText = json.result?.source === 'vercel-blob' ? ' sur Vercel Blob Cloud' : '';
+        triggerToast(`Toutes les modifications ont été enregistrées${sourceText} !`);
       } else {
-        triggerToast(`Erreur : ${json.error}`);
+        triggerToast(`Erreur : ${json.error || 'Échec de sauvegarde'}`);
       }
     } catch (err) {
       triggerToast('Erreur réseau lors de la sauvegarde.');

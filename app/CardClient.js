@@ -15,10 +15,13 @@ export default function CardClient({ initialData }) {
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
 
-    // Optional background sync to ensure latest data if updated in admin in another tab
+    // Live background sync to ensure latest data from Vercel Blob
     async function syncData() {
       try {
-        const res = await fetch('/api/data', { cache: 'no-store' });
+        const res = await fetch(`/api/data?t=${Date.now()}`, {
+          cache: 'no-store',
+          headers: { 'Cache-Control': 'no-cache, no-store' },
+        });
         if (res.ok) {
           const json = await res.json();
           if (json.success && json.data) {
@@ -29,6 +32,9 @@ export default function CardClient({ initialData }) {
         // Silently keep using initialData
       }
     }
+
+    // Immediately sync on mount
+    syncData();
 
     const handleFocus = () => syncData();
     window.addEventListener('focus', handleFocus);
