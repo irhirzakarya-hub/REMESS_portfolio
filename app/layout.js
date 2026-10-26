@@ -2,7 +2,7 @@ import './globals.css';
 
 export const metadata = {
   title: "REMESS - Réseau Marocain d'Économie Sociale et Solidaire",
-  description: "Carte NFC Digitale officielle et plateforme d'impact du REMESS au Maroc.",
+  description: "Carte REMESS Digitale officielle et plateforme d'impact du REMESS au Maroc.",
 };
 
 export const viewport = {

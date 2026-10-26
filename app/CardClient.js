@@ -65,7 +65,7 @@ export default function CardClient({ initialData }) {
   const shareCard = async () => {
     const general = data.general || defaultData.general;
     const shareData = {
-      title: `${general.orgName} - Carte NFC Digitale`,
+      title: `${general.orgName} - Carte REMESS Digitale`,
       text: general.subtitle,
       url: window.location.href,
     };
@@ -93,7 +93,7 @@ export default function CardClient({ initialData }) {
         <div className="container nav-content">
           <div className="nfc-badge">
             <span className="nfc-pulse-dot"></span>
-            <span>{general.badgeText || 'Carte NFC Digitale'}</span>
+            <span>{general.badgeText || 'Carte REMESS Digitale'}</span>
           </div>
 
           <button

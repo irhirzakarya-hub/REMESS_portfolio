@@ -1,4 +1,4 @@
-# REMESS - Carte NFC Digitale & Hub de Contact (Next.js & Vercel Blob)
+# REMESS - Carte REMESS Digitale & Hub de Contact (Next.js & Vercel Blob)
 
 Plateforme moderne de carte de visite NFC digitale et hub de réseaux officiels pour le **Réseau Marocain d'Économie Sociale et Solidaire (REMESS)**.
 
