@@ -50,13 +50,7 @@
       "enabled": true
     },
     "siteweb": {
-      "id": "siteweb",
-      "title": "Site Web",
-      "url": "https://remess.ma",
-      "label": "www.remess.ma",
-      "icon": "fa-solid fa-globe",
-      "color": "#8C2B18",
-      "enabled": false
+      "enabled": true
     },
     "maps": {
       "id": "maps",
@@ -85,17 +79,11 @@
       "label": "+212 537 000 000",
       "icon": "fa-solid fa-phone",
       "color": "#1B72E8",
-      "enabled": false
+      "enabled": true
     },
     "whatsapp": {
-      "id": "whatsapp",
-      "title": "WhatsApp",
-      "value": "+212661000000",
-      "label": "+212 661 000 000",
-      "icon": "fa-brands fa-whatsapp",
-      "color": "#25D366",
-      "enabled": false
+      "enabled": true
     }
   },
-  "updatedAt": "2026-10-26T14:06:40.676Z"
+  "updatedAt": "2026-10-26T14:24:41.172Z"
 }
