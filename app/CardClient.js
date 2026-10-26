@@ -78,6 +78,7 @@ export default function CardClient({ initialData }) {
   };
 
   const { general = defaultData.general, links = defaultData.links } = data;
+  const hasDirectContact = Boolean(links?.whatsapp?.enabled || links?.phone?.enabled);
 
   return (
     <>
@@ -100,7 +101,7 @@ export default function CardClient({ initialData }) {
         </div>
       </nav>
 
-      <main className="container">
+      <main className="container" style={{ paddingBottom: hasDirectContact ? '95px' : '2.5rem' }}>
         {/* Hero / NFC Profile Section */}
         <section className="hero-section">
           <div className="glass-card hero-card">
@@ -375,47 +376,49 @@ export default function CardClient({ initialData }) {
         </footer>
       </main>
 
-      {/* Sticky Bottom Floating Bar on Mobile */}
-      <div className="mobile-float-bar">
-        {links.whatsapp?.enabled && (
-          <a
-            href={`https://wa.me/${links.whatsapp.value?.replace(/[^0-9]/g, '')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="float-btn float-btn-primary"
-          >
-            <i className="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp</span>
-          </a>
-        )}
+      {/* Sticky Bottom Floating Bar on Mobile: Only active when WhatsApp or Phone direct actions are enabled */}
+      {hasDirectContact && (
+        <div className="mobile-float-bar">
+          {links.whatsapp?.enabled && (
+            <a
+              href={`https://wa.me/${links.whatsapp.value?.replace(/[^0-9]/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="float-btn float-btn-primary"
+            >
+              <i className="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+          )}
 
-        {links.phone?.enabled && (
-          <a
-            href={`tel:${links.phone.value?.replace(/[^0-9+]/g, '')}`}
-            className="float-btn"
-          >
-            <i className="fa-solid fa-phone"></i>
-            <span>Appeler</span>
-          </a>
-        )}
+          {links.phone?.enabled && (
+            <a
+              href={`tel:${links.phone.value?.replace(/[^0-9+]/g, '')}`}
+              className="float-btn"
+            >
+              <i className="fa-solid fa-phone"></i>
+              <span>Appeler</span>
+            </a>
+          )}
 
-        {links.maps?.enabled && (
-          <a
-            href={links.maps.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="float-btn"
-          >
-            <i className="fa-solid fa-location-dot"></i>
-            <span>Maps</span>
-          </a>
-        )}
+          {links.maps?.enabled && (
+            <a
+              href={links.maps.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="float-btn"
+            >
+              <i className="fa-solid fa-location-dot"></i>
+              <span>Maps</span>
+            </a>
+          )}
 
-        <button className="float-btn" onClick={shareCard}>
-          <i className="fa-solid fa-share-nodes"></i>
-          <span>Partager</span>
-        </button>
-      </div>
+          <button className="float-btn" onClick={shareCard}>
+            <i className="fa-solid fa-share-nodes"></i>
+            <span>Partager</span>
+          </button>
+        </div>
+      )}
 
       {/* Toast Alert */}
       <div id="toastNotification" className={`toast-container ${showToast ? 'show' : ''}`}>

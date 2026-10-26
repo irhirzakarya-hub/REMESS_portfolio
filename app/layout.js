@@ -5,6 +5,13 @@ export const metadata = {
   description: "Carte NFC Digitale officielle et plateforme d'impact du REMESS au Maroc.",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#FAF7F2',
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="fr" dir="ltr" data-theme="light">
