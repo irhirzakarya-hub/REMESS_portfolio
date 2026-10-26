@@ -50,7 +50,7 @@
       "enabled": true
     },
     "siteweb": {
-      "enabled": true
+      "enabled": false
     },
     "maps": {
       "id": "maps",
@@ -79,11 +79,11 @@
       "label": "+212 537 000 000",
       "icon": "fa-solid fa-phone",
       "color": "#1B72E8",
-      "enabled": true
+      "enabled": false
     },
     "whatsapp": {
-      "enabled": true
+      "enabled": false
     }
   },
-  "updatedAt": "2026-10-26T14:24:41.172Z"
+  "updatedAt": "2026-10-26T14:31:59.980Z"
 }
