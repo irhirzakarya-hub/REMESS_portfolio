@@ -370,9 +370,6 @@ export default function CardClient({ initialData }) {
 
         <footer className="footer">
           <p>© 2026 <strong>{general.orgName}</strong></p>
-          <p style={{ marginTop: '4px', fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-            Propulsé par Next.js & Vercel Blob
-          </p>
         </footer>
       </main>
 
