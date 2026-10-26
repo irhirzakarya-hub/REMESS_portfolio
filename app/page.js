@@ -188,11 +188,11 @@ export default function Home() {
             FACEBOOK, INSTAGRAM, LINKEDIN, EMAIL, SITEWEB, MAPS, REVIEWS
             =================================================================== */}
 
-        {/* 1. Réseaux Sociaux : Facebook, Instagram, LinkedIn */}
+        {/* 1. Réseaux Sociaux & Contact : Facebook, Instagram, LinkedIn, Email */}
         <section className="socials-section">
           <div className="section-header">
             <i className="fa-solid fa-share-nodes"></i>
-            <h2>Réseaux Sociaux Officiels</h2>
+            <h2>Réseaux Sociaux & Contact</h2>
           </div>
 
           <div className="social-tiles-grid">
@@ -238,7 +238,7 @@ export default function Home() {
                 href={links.linkedin.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="social-tile ln full-width"
+                className="social-tile ln"
                 id="link-linkedin"
               >
                 <i className="fa-brands fa-linkedin-in"></i>
@@ -249,58 +249,34 @@ export default function Home() {
                 <i className="fa-solid fa-arrow-up-right-from-square tile-action-icon"></i>
               </a>
             )}
-          </div>
-        </section>
 
-        {/* 2. Coordonnées Directes : EMAIL & SITEWEB */}
-        <section className="channels-section">
-          <div className="section-header">
-            <i className="fa-solid fa-globe"></i>
-            <h2>Contact & Présence Web</h2>
-          </div>
-
-          <div className="social-tiles-grid">
             {/* EMAIL */}
             {links.email?.enabled && (
-              <div
-                className="social-tile email full-width"
-                style={{ cursor: 'pointer' }}
-                onClick={() => {
-                  window.location.href = `mailto:${links.email.value}`;
-                }}
+              <a
+                href={`mailto:${links.email.value}`}
+                className="social-tile email"
                 id="link-email"
               >
                 <i className="fa-solid fa-envelope"></i>
                 <div className="social-meta">
-                  <span className="social-name">Email Professionnel</span>
+                  <span className="social-name">Email</span>
                   <span className="social-sub">{links.email.value}</span>
                 </div>
-                <button
-                  type="button"
-                  aria-label="Copier l'e-mail"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    copyToClipboard(links.email.value, 'Email');
-                  }}
-                  style={{
-                    marginLeft: 'auto',
-                    background: 'rgba(243, 160, 7, 0.15)',
-                    border: 'none',
-                    padding: '6px 10px',
-                    borderRadius: '8px',
-                    color: 'var(--accent-gold)',
-                    fontSize: '0.75rem',
-                    fontWeight: 700,
-                    cursor: 'pointer'
-                  }}
-                >
-                  <i className="fa-regular fa-copy" style={{ width: 'auto', height: 'auto', background: 'transparent' }}></i> Copier
-                </button>
-              </div>
+                <i className="fa-solid fa-arrow-up-right-from-square tile-action-icon"></i>
+              </a>
             )}
+          </div>
+        </section>
 
-            {/* SITEWEB */}
-            {links.siteweb?.enabled && (
+        {/* 2. SITEWEB : Affiché uniquement si activé */}
+        {links.siteweb?.enabled && (
+          <section className="channels-section">
+            <div className="section-header">
+              <i className="fa-solid fa-globe"></i>
+              <h2>Site Web</h2>
+            </div>
+
+            <div className="social-tiles-grid">
               <a
                 href={links.siteweb.url}
                 target="_blank"
@@ -315,9 +291,9 @@ export default function Home() {
                 </div>
                 <i className="fa-solid fa-arrow-up-right-from-square tile-action-icon"></i>
               </a>
-            )}
-          </div>
-        </section>
+            </div>
+          </section>
+        )}
 
         {/* 3. MAPS : Localisation & Itinéraire */}
         {links.maps?.enabled && (
